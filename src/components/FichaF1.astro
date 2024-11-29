@@ -1,55 +1,166 @@
-	<main>
-		<h1>Fichas de Formulario</span></h1>
-		<form id="bigForm">
-			<div class="form-group">
-				<label for="name">Full Name:</label>
-				<input type="text" id="name" name="name" required>
-			</div>
-			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
-			</div>
-			<div class="form-group">
-				<label for="phone">Phone Number:</label>
-				<input type="tel" id="phone" name="phone">
-			</div>
-			<div class="form-group">
-				<label for="address">Address:</label>
-				<textarea id="address" name="address" rows="3"></textarea>
-			</div>
-			<div class="form-group">
-				<label for="birthdate">Date of Birth:</label>
-				<input type="date" id="birthdate" name="birthdate">
-			</div>
-			<div class="form-group">
-				<label for="occupation">Occupation:</label>
-				<input type="text" id="occupation" name="occupation">
-			</div>
-			<div class="form-group">
-				<label for="interests">Interests:</label>
-				<select id="interests" name="interests" multiple>
-					<option value="sports">Sports</option>
-					<option value="music">Music</option>
-					<option value="reading">Reading</option>
-					<option value="travel">Travel</option>
-					<option value="cooking">Cooking</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label>Gender:</label>
-				<div class="radio-group">
-					<input type="radio" id="male" name="gender" value="male">
-					<label for="male">Male</label>
-					<input type="radio" id="female" name="gender" value="female">
-					<label for="female">Female</label>
-					<input type="radio" id="other" name="gender" value="other">
-					<label for="other">Other</label>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="comments">Additional Comments:</label>
-				<textarea id="comments" name="comments" rows="5"></textarea>
-			</div>
-			<button type="submit">Submit and Download Styled PDF</button>
-		</form>
-	</main>
+
+<h1 class="h1">Fichas de Ficha 1</h1>
+<form id="bigForm" class="bigForm">
+    <div class="form-group">
+        <label for="SISCAT" class="form-label">SISCAT</label>
+        <input type="number" id="SISCAT" name="SISCAT" class="form-input" placeholder="SISCAT" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="codigo_catastral" class="form-label">Codigo catastral</label>
+        <input type="number" id="codigo_catastral" name="codigo_catastral" class="form-input" placeholder="Codigo catastral" required>
+    </div>
+
+    <div class="form-group">
+        <label for="propietarios" class="form-label">select</label>
+        <select id="propietarios" name="propietarios" class="form-select">
+            <option value="Propietario">Propietario</option>
+            <option value="Poseedor">Poseedor</option>
+            <option value="Personeria">Personeria</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="nombre_completo" class="form-label">Nombre Completo:</label>
+        <input type="text" id="nombre_completo" name="nombre_completo" class="form-input" placeholder="Nombre Completo" required>
+    </div>
+
+    <div class="form-group">
+        <label for="cedula" class="form-label">Cedula o Pasaporte</label>
+        <input type="tel" id="cedula" name="cedula" class="form-input" placeholder="Cedula o Pasaporte">
+    </div>
+
+    <div class="form-group">
+        <label for="razonsocial" class="form-label">Razon Social</label>
+        <input type="text" id="razonsocial" name="razonsocial" class="form-input" placeholder="Razon Social">
+    </div>
+
+    <div class="form-group">
+        <label for="coops" class="form-label">select</label>
+        <select id="coops" name="coops" class="form-select">
+            <option value="otro">Otro</option>
+            <option value="lim">S.R. Lim</option>
+            <option value="coop">S. Coop</option>
+            <option value="anonima">S. Anonima</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="direccion" class="form-label">Direccion</label>
+        <input type="text" id="direccion" name="direccion" class="form-input" placeholder="Direccion">
+    </div>
+
+    <div class="form-group">
+        <label for="beneficios" class="form-label">Beneficios</label>
+        <input type="text" id="beneficios" name="beneficios" class="form-input" placeholder="Beneficios">
+    </div>
+
+    <div class="form-group">
+        <label for="nececidades" class="form-label">Nececidades de la Poblacion</label>
+        <select id="nececidades" name="nececidades" class="form-select">
+            <option value="otro">Otro</option>
+            <option value="lim">S.R. Lim</option>
+            <option value="coop">S. Coop</option>
+            <option value="anonima">S. Anonima</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="nombre_del_encuestado" class="form-label">Nombre del Encuestado</label>
+        <input type="text" id="nombre_del_encuestado" name="nombre_del_encuestado" class="form-input" placeholder="Nombre del Encuestado">
+    </div>
+
+    <div class="form-group">
+        <label for="encuestador" class="form-label">Encuestador</label>
+        <select id="encuestador" name="encuestador" class="form-select">
+            <option value="julio">Julio</option>
+            <option value="xochil">Xochil</option>
+            <option value="omid">Omid</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="birthdate" class="form-label">Date</label>
+        <input type="date" id="birthdate" name="birthdate" class="form-input">
+    </div>
+
+    <div class="form-group">
+        <label for="comments" class="form-label">Additional Comments:</label>
+        <textarea id="comments" name="comments" class="form-textarea" rows="5"></textarea>
+    </div>
+
+    <button type="submit" class="form-button">Submit and Download Styled PDF</button>
+</form>
+
+
+<style>
+	.h1{
+		text-align: center;
+	}
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .bigForm {
+        background-color: #e0f7fa; /* Color de fondo más suave */
+        width: 100%;
+        max-width: 800px; /* Ancho máximo para el formulario */
+        margin: 0 auto; /* Centra el formulario en la página */
+        padding: 20px;
+        border-radius: 10px; /* Esquinas redondeadas */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        animation: fadeIn 1s ease-out; /* Animación de entrada */
+    }
+
+    .form-group {
+        background-color: #f0f0f0; /* Color de fondo más claro */
+        padding: 10px;
+        margin: 10px 0; /* Margen vertical */
+        border-radius: 5px; /* Esquinas redondeadas */
+        animation: fadeIn 0.8s ease-out; /* Animación de entrada */
+        animation-delay: 0.2s; /* Retardo para la animación */
+        animation-fill-mode: both; /* Mantiene el estado final de la animación */
+    }
+
+    .form-label {
+        font-weight: bold; /* Texto en negrita */
+        display: block; /* Forzar en línea nueva */
+        margin-bottom: 5px; /* Espaciado debajo del label */
+    }
+
+    .form-input, .form-select, .form-textarea, .form-button {
+        width: 100%; /* Ancho completo */
+        padding: 10px;
+        margin: 5px 0; /* Margen vertical */
+        box-sizing: border-box; /* Considera el padding y el borde en el ancho total */
+        border: 1px solid #ccc; /* Borde gris claro */
+        border-radius: 5px; /* Esquinas redondeadas */
+    }
+
+    .form-button {
+        background-color: #007bff; /* Color de fondo del botón */
+        color: #fff; /* Color del texto del botón */
+        border: none; /* Sin borde */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el color de fondo y la transformación */
+    }
+
+    .form-button:hover {
+        background-color: #0056b3; /* Color de fondo al pasar sobre el botón */
+        transform: scale(1.05); /* Aumenta el tamaño del botón */
+    }
+
+    /* Animación para el campo de entrada cuando está enfocado */
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+        border-color: #007bff; /* Color del borde cuando está enfocado */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra del campo cuando está enfocado */
+        outline: none; /* Elimina el borde por defecto del navegador */
+    }
+</style>

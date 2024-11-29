@@ -1,66 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import FichaF1 from '../components/FichaF1.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout>
-	<FichaF1>
+	<Card></Card>
 </Layout>
-
-<script>
-	// PROBANDO EDITAR 
-	import { jsPDF } from 'jspdf';
-	document.getElementById('bigForm').addEventListener('submit', function(e) {
-		e.preventDefault();
-		const formData = new FormData(this);
-		const pdf = new jsPDF();
-
-		// Set colors
-		const primaryColor = [41, 128, 185]; // A nice blue
-		const secondaryColor = [211, 210, 207]; // A light gray
-
-		// Add a header
-		pdf.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-		pdf.rect(0, 0, 210, 40, 'F');
-		pdf.setTextColor(255, 255, 255);
-		pdf.setFontSize(24);
-		pdf.text('Form Submission', 105, 25, { align: 'center' });
-
-		// Reset text color for content
-		pdf.setTextColor(0, 0, 0);
-		pdf.setFontSize(12);
-
-		let yPosition = 50;
-
-		for (let [key, value] of formData.entries()) {
-			if (value) {
-
-				/* Add a light background for each row
-				pdf.setFillColor(211, 210, 207, 0.1);
-				pdf.rect(10, yPosition - 5, 190, 10, 'F');
-				*/
-
-				// Add key-value pair
-				pdf.setFont("courier", 'bold');
-				pdf.text(`${key}:`, 15, yPosition);
-				pdf.setFont(undefined, 'normal');
-				pdf.text(`${value}`, 60, yPosition);
-
-				yPosition += 15;
-
-				// Add a light separator line
-				pdf.setDrawColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-				pdf.line(10, yPosition - 10, 200, yPosition - 10);
-			}
-		}
-
-		// Add a footer
-		pdf.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-		pdf.rect(0, 287, 210, 10, 'F');
-		pdf.setTextColor(255, 255, 255);
-		pdf.setFontSize(12);
-		pdf.text('Formulario de Fichas', 105, 293, { align: 'center' });
-
-		pdf.save('Fichas_form.pdf');
-	});
-</script>
