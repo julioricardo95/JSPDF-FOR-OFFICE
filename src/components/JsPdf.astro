@@ -1,23 +1,24 @@
 <script>
-	// PROBANDO EDITAR 
 	import { jsPDF } from 'jspdf';
+
 	document.getElementById('bigForm').addEventListener('submit', function(e) {
 		e.preventDefault();
 		const formData = new FormData(this);
 		const pdf = new jsPDF();
 
-		// Set colors
-		const primaryColor = [41, 128, 185]; // A nice blue
-		const secondaryColor = [211, 210, 207]; // A light gray
+		// Definir los colores
+		const primaryColor = [61, 184, 126];
+		const secondaryColor = [87, 117, 103];
+		const lightGray = [179, 230, 187, 0.1];
 
-		// Add a header
+		// Agregar un encabezado
 		pdf.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
 		pdf.rect(0, 0, 210, 40, 'F');
 		pdf.setTextColor(255, 255, 255);
 		pdf.setFontSize(24);
 		pdf.text('Form Submission', 105, 25, { align: 'center' });
 
-		// Reset text color for content
+		// Resetear el color del texto para el contenido
 		pdf.setTextColor(0, 0, 0);
 		pdf.setFontSize(12);
 
@@ -25,13 +26,8 @@
 
 		for (let [key, value] of formData.entries()) {
 			if (value) {
-
-				/* Add a light background for each row
-				pdf.setFillColor(211, 210, 207, 0.1);
-				pdf.rect(10, yPosition - 5, 190, 10, 'F');
-				*/
-
-				// Add key-value pair
+				
+				// Añadir par clave-valor
 				pdf.setFont("courier", 'bold');
 				pdf.text(`${key}:`, 15, yPosition);
 				pdf.setFont(undefined, 'normal');
@@ -39,13 +35,13 @@
 
 				yPosition += 15;
 
-				// Add a light separator line
+				// Agregar una línea separadora clara
 				pdf.setDrawColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
 				pdf.line(10, yPosition - 10, 200, yPosition - 10);
 			}
 		}
 
-		// Add a footer
+		// Agregar un pie de página
 		pdf.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
 		pdf.rect(0, 287, 210, 10, 'F');
 		pdf.setTextColor(255, 255, 255);

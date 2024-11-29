@@ -1,84 +1,139 @@
 ---
 
 ---
-<h1>fichas</h1>
-<ul>
-	
-	<li class="link-card">
-		<a href="/ficha/ficha1">
-			<h2>Ficha 1</h2>
-		</a>
-	</li>
-
-	<li class="link-card">
-		<a href="/ficha/ficha2">
-			<h2>Ficha 2</h2>
-		</a>
-	</li>
-
-	<li class="link-card">
-		<a href="/ficha/ficha3">
-			<h2>Ficha 3</h2>
-		</a>
-	</li>
-
-	<li class="link-card">
-		<a href="/ficha/ficha4">
-			<h2>Ficha 4</h2>
-		</a>
-	</li>
-
-	<li class="link-card">
-		<a href="/ficha/ficha5">
-			<h2>Ficha 5</h2>
-		</a>
-	</li>
-
-	<li class="link-card">
-		<a href=/ficha/ficha6">
-			<h2>Ficha 6</h2>
-		</a>
-	</li>
-	
+<h1 class="main-title">Fichas</h1>
+<ul class="ficha-list">
+  <li class="link-card">
+    <a href="/ficha/ficha1" class="ficha-link">
+      <h2 class="ficha-title">Ficha 1</h2>
+    </a>
+  </li>
+  <li class="link-card">
+    <a href="/ficha/ficha2" class="ficha-link">
+      <h2 class="ficha-title">Ficha 2</h2>
+    </a>
+  </li>
+  <li class="link-card">
+    <a href="/ficha/ficha3" class="ficha-link">
+      <h2 class="ficha-title">Ficha 3</h2>
+    </a>
+  </li>
+  <li class="link-card">
+    <a href="/ficha/ficha4" class="ficha-link">
+      <h2 class="ficha-title">Ficha 4</h2>
+    </a>
+  </li>
+  <li class="link-card">
+    <a href="/ficha/ficha5" class="ficha-link">
+      <h2 class="ficha-title">Ficha 5</h2>
+    </a>
+  </li>
+  <li class="link-card">
+    <a href="/ficha/ficha6" class="ficha-link">
+      <h2 class="ficha-title">Ficha 6</h2>
+    </a>
+  </li>
 </ul>
 
+
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 1s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
+
+:root {
+  --primary-color: #3db87ecc;
+  --secondary-color: #2F8F62;
+  --accent-color: #48DB97;
+  --hover-color: #226646;
+  --title-color: #577567;
+  --background-color: #b3e6bb80; /* Mantengo el color de fondo oscuro para el contraste */
+  --accent-gradient: linear-gradient(90deg, #3DB87E, #48DB97);
+  --accent-light: 255, 255, 255;
+  --hover-opacity: 1;
+  --default-opacity: 0.8;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Arial', sans-serif;
+}
+
+.main-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ficha-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link-card {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Para que se vean bien en móviles */
+  width: 100%; /* Ancho completo en móviles */
+  padding: 1px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: background-position 1s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ficha-link {
+  width: 100%;
+  text-decoration: none;
+  line-height: 1.4;
+  padding: calc(1.5rem - 1px);
+  border-radius: 8px;
+  color: var(--accent-light);
+  background-color: var(--primary-color);
+  opacity: var(--default-opacity);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ficha-link:hover {
+  opacity: var(--hover-opacity);
+  transform: scale(1.05);
+  background-color: var(--hover-color);
+}
+
+.ficha-title {
+  margin: 0;
+  font-size: 1.5rem;
+  transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--title-color);
+}
+
+.link-card:is(:hover, :focus-within) {
+  background-image: var(--accent-gradient);
+}
+
+.link-card:is(:hover, :focus-within) .ficha-title {
+  color: rgb(var(--accent-light));
+}
+
+/* Media Queries para Responsividad */
+@media (min-width: 600px) {
+  .link-card {
+    width: calc(50% - 1rem); /* Dos columnas en pantallas medianas */
+  }
+}
+
+@media (min-width: 900px) {
+  .link-card {
+    width: calc(33.333% - 1rem); /* Tres columnas en pantallas grandes */
+  }
+}
+
 </style>

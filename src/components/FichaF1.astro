@@ -1,18 +1,18 @@
 
-<h1 class="h1">Fichas de Ficha 1</h1>
+<h1 class="main-title">Fichas de Ficha 1</h1>
 <form id="bigForm" class="bigForm">
     <div class="form-group">
         <label for="SISCAT" class="form-label">SISCAT</label>
         <input type="number" id="SISCAT" name="SISCAT" class="form-input" placeholder="SISCAT" required>
     </div>
-    
+
     <div class="form-group">
         <label for="codigo_catastral" class="form-label">Codigo catastral</label>
         <input type="number" id="codigo_catastral" name="codigo_catastral" class="form-input" placeholder="Codigo catastral" required>
     </div>
 
     <div class="form-group">
-        <label for="propietarios" class="form-label">select</label>
+        <label for="propietarios" class="form-label">Tipo de Propietario</label>
         <select id="propietarios" name="propietarios" class="form-select">
             <option value="Propietario">Propietario</option>
             <option value="Poseedor">Poseedor</option>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="form-group">
-        <label for="nombre_completo" class="form-label">Nombre Completo:</label>
+        <label for="nombre_completo" class="form-label">Nombre Completo</label>
         <input type="text" id="nombre_completo" name="nombre_completo" class="form-input" placeholder="Nombre Completo" required>
     </div>
 
@@ -36,7 +36,7 @@
     </div>
 
     <div class="form-group">
-        <label for="coops" class="form-label">select</label>
+        <label for="coops" class="form-label">Tipo de Cooperativa</label>
         <select id="coops" name="coops" class="form-select">
             <option value="otro">Otro</option>
             <option value="lim">S.R. Lim</option>
@@ -66,8 +66,8 @@
     </div>
 
     <div class="form-group">
-        <label for="nombre_del_encuestado" class="form-label">Nombre del Encuestado</label>
-        <input type="text" id="nombre_del_encuestado" name="nombre_del_encuestado" class="form-input" placeholder="Nombre del Encuestado">
+        <label for="encuestado" class="form-label">Nombre del Encuestado</label>
+        <input type="text" id="encuestado" name="encuestado" class="form-input" placeholder="Nombre del Encuestado">
     </div>
 
     <div class="form-group">
@@ -80,98 +80,111 @@
     </div>
 
     <div class="form-group">
-        <label for="birthdate" class="form-label">Date</label>
+        <label for="birthdate" class="form-label">Fecha</label>
         <input type="date" id="birthdate" name="birthdate" class="form-input">
     </div>
 
     <div class="form-group">
-        <label for="comments" class="form-label">Additional Comments:</label>
+        <label for="comments" class="form-label">Comentarios Adicionales</label>
         <textarea id="comments" name="comments" class="form-textarea" rows="5"></textarea>
     </div>
 
-    <button type="submit" class="form-button">Submit and Download Styled PDF</button>
+    <button type="submit" class="form-button">Enviar y Descargar PDF Estilizado <strong>julioricardo95😎</strong></button>
 </form>
 
 
+
+
 <style>
-    :root {
-        --bg-color: #e0f7fa;
-        --form-bg-color: #f0f0f0;
-        --primary-color: #007bff;
-        --primary-hover-color: #0056b3;
-        --border-color: #ccc;
-        --focus-border-color: #007bff;
-        --focus-shadow-color: rgba(0, 123, 255, 0.5);
-        --form-group-border-color: #d1d1d1;
-        --form-group-shadow-color: rgba(0, 0, 0, 0.1);
-    }
+:root {
+--bg-color: #f0f4f7;
+--form-bg-color: #e0f7fa;
+--primary-color: #3db87ecc;
+--primary-hover-color: #226646;
+--border-color: #ccc;
+--focus-border-color: #3DB87E;
+--focus-shadow-color: rgba(61, 184, 126, 0.5);
+--form-group-border-color: #d1d1d1;
+--form-group-shadow-color: rgba(0, 0, 0, 0.1);
+--secondary-color: #2F8F62;
+--accent-color: #48DB97;
+--title-color: #577567;
+--highlight-bg-color: #b3e6bb80;
+}
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    .bigForm {
-        background-color: var(--bg-color);
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 1s ease-out;
-    }
+.bigForm {
+    background-color: var(--bg-color);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+.main-title{
+    color: var(--primary-color);
+    margin: 10px auto;
+    text-align: center;
 
-    .form-group {
-        background-color: var(--form-bg-color);
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 8px;
-        border: 1px solid var(--form-group-border-color);
-        box-shadow: 0 2px 4px var(--form-group-shadow-color);
-        animation: fadeIn 0.8s ease-out;
-        animation-delay: 0.2s;
-        animation-fill-mode: both;
-    }
+}
 
-    .form-label {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 8px;
-        color: #333;
-    }
+.form-group {
+    background-color: var(--form-bg-color);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid var(--form-group-border-color);
+    box-shadow: 0 2px 4px var(--form-group-shadow-color);
+    animation: fadeIn 0.8s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
 
-    .form-input, .form-select, .form-textarea, .form-button {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0;
-        box-sizing: border-box;
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-    }
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
 
-    .form-button {
-        background-color: var(--primary-color);
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+.form-input, .form-select, .form-textarea, .form-button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--highlight-bg-color);
+}
 
-    .form-button:hover {
-        background-color: var(--primary-hover-color);
-        transform: scale(1.05);
-    }
+.form-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-        border-color: var(--focus-border-color);
-        box-shadow: 0 0 5px var(--focus-shadow-color);
-        outline: none;
-    }
+.form-button:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--focus-border-color);
+    box-shadow: 0 0 5px var(--focus-shadow-color);
+    outline: none;
+}
 </style>
