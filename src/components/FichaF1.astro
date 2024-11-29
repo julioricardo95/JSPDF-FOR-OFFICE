@@ -94,9 +94,18 @@
 
 
 <style>
-	.h1{
-		text-align: center;
-	}
+    :root {
+        --bg-color: #e0f7fa;
+        --form-bg-color: #f0f0f0;
+        --primary-color: #007bff;
+        --primary-hover-color: #0056b3;
+        --border-color: #ccc;
+        --focus-border-color: #007bff;
+        --focus-shadow-color: rgba(0, 123, 255, 0.5);
+        --form-group-border-color: #d1d1d1;
+        --form-group-shadow-color: rgba(0, 0, 0, 0.1);
+    }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -109,58 +118,60 @@
     }
 
     .bigForm {
-        background-color: #e0f7fa; /* Color de fondo más suave */
+        background-color: var(--bg-color);
         width: 100%;
-        max-width: 800px; /* Ancho máximo para el formulario */
-        margin: 0 auto; /* Centra el formulario en la página */
+        max-width: 800px;
+        margin: 0 auto;
         padding: 20px;
-        border-radius: 10px; /* Esquinas redondeadas */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-        animation: fadeIn 1s ease-out; /* Animación de entrada */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out;
     }
 
     .form-group {
-        background-color: #f0f0f0; /* Color de fondo más claro */
-        padding: 10px;
-        margin: 10px 0; /* Margen vertical */
-        border-radius: 5px; /* Esquinas redondeadas */
-        animation: fadeIn 0.8s ease-out; /* Animación de entrada */
-        animation-delay: 0.2s; /* Retardo para la animación */
-        animation-fill-mode: both; /* Mantiene el estado final de la animación */
+        background-color: var(--form-bg-color);
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border: 1px solid var(--form-group-border-color);
+        box-shadow: 0 2px 4px var(--form-group-shadow-color);
+        animation: fadeIn 0.8s ease-out;
+        animation-delay: 0.2s;
+        animation-fill-mode: both;
     }
 
     .form-label {
-        font-weight: bold; /* Texto en negrita */
-        display: block; /* Forzar en línea nueva */
-        margin-bottom: 5px; /* Espaciado debajo del label */
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
     }
 
     .form-input, .form-select, .form-textarea, .form-button {
-        width: 100%; /* Ancho completo */
+        width: 100%;
         padding: 10px;
-        margin: 5px 0; /* Margen vertical */
-        box-sizing: border-box; /* Considera el padding y el borde en el ancho total */
-        border: 1px solid #ccc; /* Borde gris claro */
-        border-radius: 5px; /* Esquinas redondeadas */
+        margin: 5px 0;
+        box-sizing: border-box;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
     }
 
     .form-button {
-        background-color: #007bff; /* Color de fondo del botón */
-        color: #fff; /* Color del texto del botón */
-        border: none; /* Sin borde */
-        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el color de fondo y la transformación */
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .form-button:hover {
-        background-color: #0056b3; /* Color de fondo al pasar sobre el botón */
-        transform: scale(1.05); /* Aumenta el tamaño del botón */
+        background-color: var(--primary-hover-color);
+        transform: scale(1.05);
     }
 
-    /* Animación para el campo de entrada cuando está enfocado */
     .form-input:focus, .form-select:focus, .form-textarea:focus {
-        border-color: #007bff; /* Color del borde cuando está enfocado */
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra del campo cuando está enfocado */
-        outline: none; /* Elimina el borde por defecto del navegador */
+        border-color: var(--focus-border-color);
+        box-shadow: 0 0 5px var(--focus-shadow-color);
+        outline: none;
     }
 </style>
