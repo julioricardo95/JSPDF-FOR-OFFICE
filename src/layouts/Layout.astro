@@ -4,17 +4,17 @@
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/JSPDF-FOR-OFFICE/style.css">
-		<title>form</title>
-	</head>
-	
-	<body>
-		<slot/>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" alt="Favicon" />
+    <meta name="generator" content="Astro" />
+    <link rel="stylesheet" href="/JSPDF-FOR-OFFICE/style.css" />
+    <title>Formulario</title>
+  </head>
+
+  <body class="body-class">
+    <slot class="slot-class" />
+  </body>
 </html>

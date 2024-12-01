@@ -1,55 +1,9 @@
-<main>
-    <h1>Fichas de Formulario</span></h1>
-    <form id="bigForm">
-        <div class="form-group">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
-        <div class="form-group">
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="birthdate">Date of Birth:</label>
-            <input type="date" id="birthdate" name="birthdate">
-        </div>
-        <div class="form-group">
-            <label for="occupation">Occupation:</label>
-            <input type="text" id="occupation" name="occupation">
-        </div>
-        <div class="form-group">
-            <label for="interests">Interests:</label>
-            <select id="interests" name="interests" multiple>
-                <option value="sports">Sports</option>
-                <option value="music">Music</option>
-                <option value="reading">Reading</option>
-                <option value="travel">Travel</option>
-                <option value="cooking">Cooking</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Gender:</label>
-            <div class="radio-group">
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="comments">Additional Comments:</label>
-            <textarea id="comments" name="comments" rows="5"></textarea>
-        </div>
-        <button type="submit">Submit and Download Styled PDF</button>
-    </form>
-</main>
+<h1 class="main-title">Fichas de Ficha 3</h1>
+<form id="bigForm" class="bigForm">
+
+    <slot/>
+
+    <button type="submit" class="form-button">Enviar y Descargar PDF Estilizado
+        <strong>julioricardo95😎</strong>
+    </button>
+</form>
