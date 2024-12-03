@@ -236,49 +236,150 @@
       </select>
   </div>
 
-<!-- SERVICIOS PUBLICOS -->
+<!-- SERVICIOS PUBLICOS EXISTENTES EN LA VIA O LUGAR-->
+
+  <fieldset>
+    <legend>Choose your interests</legend>
+
+        <div class="form-group">
+            <input type="checkbox" id="agua" name="servicios" value="AGUA POTABLE" class="form-input" />
+            <label for="agua" class="form-label">AGUA POTABLE</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="alc_pluvial" name="servicios" value="ALCANTARILLADO PLUVIAL" class="form-input" />
+            <label for="alc_pluvial" class="form-label">ALCANTARILLADO PLUVIAL</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="energia" name="servicios" value="ENERGIA ELECTRICA" class="form-input" />
+            <label for="energia" class="form-label">ENERGIA ELECTRICA</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="transporte" name="servicios" value="TRANSPORTE PUBLICO" class="form-input" />
+            <label for="transporte" class="form-label">TRANSPORTE PUBLICO</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="basura" name="servicios" value="ELIMINACION DE BASURA" class="form-input" />
+            <label for="basura" class="form-label">ELIMINACION DE BASURA</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="alc_sanitario" name="servicios" value="ALCANTARILLADO SANITARIO" class="form-input" />
+            <label for="alc_sanitario" class="form-label">ALCANTARILLADO SANITARIO</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="telefono" name="servicios" value="TELEFONO" class="form-input" />
+            <label for="telefono" class="form-label">TELEFONO</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="alumbrado" name="servicios" value="ALUMBRADO PUBICO" class="form-input" />
+            <label for="alumbrado" class="form-label">ALUMBRADO PUBICO</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="incendios" name="servicios" value="SISTEMA CONTRA INCENDIOS" class="form-input" />
+            <label for="incendios" class="form-label">SISTEMA CONTRA INCENDIOS</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="limpieza" name="servicios" value="LIMPIEZA DE CALLES" class="form-input" />
+            <label for="limpieza" class="form-label">LIMPIEZA DE CALLES</label>
+        </div>
+
+  </fieldset>
+
+<!-- NORMAS URBANISTICAS-->
+
   <div class="form-group">
-      <label for="cedula" class="form-label">Cedula o Pasaporte</label>
-      <input type="tel" id="cedula" name="cedula" class="form-input" placeholder="Cedula o Pasaporte" value="N/A" />
+      <label for="normas" class="form-label">Normas Urbanistica</label>
+      <input type="text" id="normas" name="normas" class="form-input" placeholder="Normas Urbanistica" value="N/A" />
   </div>
+
+<!-- MOBILIARIO Y OBRAS URBANAS-->  
+
   <div class="form-group">
-      <label for="razonsocial" class="form-label">Razon Social</label>
-      <input type="text" id="razonsocial" name="razonsocial" class="form-input" placeholder="Razon Social" value="N/A" />
-  </div>
-  <div class="form-group">
-      <label for="ruc" class="form-label">RUC</label>
-      <input type="number" id="ruc" name="ruc" class="form-input" placeholder="RUC" value="N/A" />
-  </div>
-  <div class="form-group">
-      <label for="coops" class="form-label">Tipo de Cooperativa</label>
-      <select id="coops" name="coops" class="form-select">
-          <option value="otro">Otro</option>
-          <option value="lim">S.R. Lim</option>
-          <option value="coop">S. Coop</option>
-          <option value="anonima">S. Anonima</option>
+      <label for="normas" class="form-label">Mejoras de vias y lugares</label>
+      <select id="normas" name="normas" class="form-select">
+            <option value="CCV">CANAL CONCRETO CICLOPEO EN V</option>
+            <option value="CDP">CANAL DRENAJE PLUVIAL</option>
+            <option value="CBV">CANCHA BASKETBALL</option>
+            <option value="CAT">CANCHA DE TENNIS O VOLLEYBALL</option>
+            <option value="CAR">CANCHA RUSTICA</option>
+            <option value="CPB">CASETA PARADA DE BUSES</option>
+            <option value="CA1">CASETA DE MADERA</option>
+            <option value="CBZ">CASETA DE PAREDES DE ZINC Y ESTRUCTURA METALICA</option>
+            <option value="CA6">CASETA DE MADERA Y PLYCEM</option>
+            <option value="CCR">CAUCE O CANAL REVESTIDO</option>
+            <option value="CLA">CORREDOR LIBRE ACCESO CONCRETO</option>
+            <option value="CLI">CORREDOR LIBRE ACCESO MADERA</option>
+            <option value="CUN">CUNETA DE CONCRETO</option>
+            <option value="DBA">DEPOSITO DE BASURA</option>
+            <option value="GRM">ENGRAMADO DE AREAS VERDES</option>
+            <option value="FUE">FUENTE DE AGUA DECORATIVA</option>
+            <option value="GCM">GRADAS DE CONCRETO O PIEDRA CANTERA CON PASAMANOS</option>
+            <option value="GRP">GRADAS DE CONCONCRETO SIMPLE</option>
+            <option value="HID">HIDRANTE</option>
+            <option value="ISL">ISLA DE CONCRETO</option>
+            <option value="JAR">JARDINERA</option>
+            <option value="JUE">JUEGO INFANTIL 4 COLUMPIOS</option>
+            <option value="JU6">JUEGO INFANTIL 6 COLUMPIOS</option>
+            <option value="JUC">JUEGO INFANTIL COLUMPIO CANASTA BICICLETA</option>
+            <option value="ΚΙΟ">KIOSCO O GLORIETA</option>
+            <option value="LG3">LUMINARIA LUJO CAJA METAL</option>
+            <option value="LJA">LUMINARIAS TIPO JARDINES</option>
+            <option value="LMM">LUMINARIA TIPO COBRA</option>
+            <option value="REF">REFLECTORES</option>
+            <option value="LG4">LUMINARIA TIPO HONGO</option>
+            <option value="MON">MONUMENTO</option>
+            <option value="MRE">MURO DE RETENCION CONCRETO</option>
+            <option value="MLC">MURO LADRILLO CUARTERON</option>
+            <option value="MCP">MURO DE CONTENCION PIEDRA CANTERA</option>
+            <option value="MBC">MURO BLOQUE DE CONCRETO</option>
+            <option value="MPB">MURO DE CONTENCION DE CONCRETO CICLOPEO</option>
+            <option value="GTI">GAVIONES TIPICO</option>
+            <option value="ADE">PATIO DE ADOQUIN</option>
+            <option value="PAS">PATIO DE ASFALTO</option>
+            <option value="PZ4">PATIO DE CERAMICA O AZULEJO</option>
+            <option value="PLC">PATIO DE LADRILLO CORRIENTE</option>
+            <option value="PLT">PATIO DE LADRILLO TERRAZO</option>
+            <option value="PPC">PATIO DE PIEDRA CANTERA</option>
+            <option value="PLA">PATIO DE PIEDRA LAJA</option>
+            <option value="PLB">PATIO DE LADRILLO DE BARRO</option>
+            <option value="PCS">PATIO DE CONCRETO</option>
+            <option value="PPI">PATIO DE PIEDRA BOLON</option>
+            <option value="PEN">PATIO ENGRAMADO</option>
+            <option value="APS">PAVIMENTO ASFALTICO PARA ESTACIONAMIENTO</option>
+            <option value="BIC">PISTA PARA BICICLETA</option>
+            <option value="PTC">POSTE DE TELEFONO CONCRETO</option>
+            <option value="PTL">POSTE DE TELEFONO METALICO</option>
+            <option value="PEM">POSTE ELECTRICO METALICO</option>
+            <option value="PEC">POSTE ELECTRICO CONCRETO</option>
+            <option value="PMA">POSTE ELECTRICO MADERA</option>
+            <option value="PCO">POSTE TELEVISION CONCRETO</option>
+            <option value="PME">POSTE TELEVISION METALICO</option>
+            <option value="HIT">POSTE INDICADOR DE KILOMETRAJE O HITOS</option>
+            <option value="POR">POZO PUBLICO COMUNAL</option>
+            <option value="PV1">POZO DE VISITA</option>
+            <option value="PUA">PUENTE METALICO AEREO</option>
+            <option value="PPE">PUENTE PEATONAL</option>
+            <option value="PVE">PUENTE VEHICULAR</option>
+            <option value="PPA">PUESTO PUBLICO AGUA POTABLE</option>
+            <option value="ROT">ROTONDA</option>
+            <option value="SEM">SEMAFORO</option>
+            <option value="SVI">SEÑAL DE TRANSITO DE PREVENCION VERTICAL</option>
+            <option value="SHP">SERVICIOS HIGIENICOS PUBLICOS</option>
+            <option value="TEL">TELEFONO PUBLICO</option>
+            <option value="TRA">TRANSFORMADOR ELECTRICO</option>
+            <option value="TAC">TARIMA DE CONCRETO</option>
+            <option value="VAD">VADO DE CONCRETO</option>
+            <option value="BTC">BEBEDERO DE CONCRETO</option>
+            <option value="CER">CERCA DE MALLA CICLON</option>
+            <option value="PTM">PISO DE TABLONES DE MADERA</option>          
       </select>
-  </div>
+  </div>  
+
   <div class="form-group">
-      <label for="direccion" class="form-label">Direccion</label>
-      <input type="text" id="direccion" name="direccion" class="form-input" placeholder="Direccion" />
+      <label for="ficheros" class="form-label">ficheros graficos de vias y lugares</label>
+      <input type="text" id="ficheros" name="ficheros" class="form-input" placeholder="ficheros graficos de vias y lugares" value="N/A" />
   </div>
-  <div class="form-group">
-      <label for="beneficios" class="form-label">Beneficios</label>
-      <input type="text" id="beneficios" name="beneficios" class="form-input" placeholder="Beneficios" value="N/A" />
-  </div>
-  <div class="form-group">
-      <label for="nececidades" class="form-label">Nececidades de la Poblacion</label>
-      <select id="nececidades" name="nececidades" class="form-select">
-          <option value="otro">Otro</option>
-          <option value="lim">S.R. Lim</option>
-          <option value="coop">S. Coop</option>
-          <option value="anonima">S. Anonima</option>
-      </select>
-  </div>
-  <div class="form-group">
-      <label for="encuestado" class="form-label">Nombre del Encuestado</label>
-      <input type="text" id="encuestado" name="encuestado" class="form-input" placeholder="Nombre del Encuestado" />
-  </div>
+
+
   <div class="form-group">
       <label for="encuestador" class="form-label">Encuestador</label>
       <select id="encuestador" name="encuestador" class="form-select">
