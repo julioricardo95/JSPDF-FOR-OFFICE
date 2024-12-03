@@ -14,22 +14,229 @@
       <label for="codigo_catastral" class="form-label">Codigo catastral</label>
       <input type="number" id="codigo_catastral" name="codigo_catastral" class="form-input" placeholder="Codigo catastral" required />
   </div>
+
   <div class="form-group">
       <label for="SISCAT" class="form-label">SISCAT</label>
       <input type="number" id="SISCAT" name="SISCAT" class="form-input" placeholder="SISCAT" />
   </div>
+
+<!-- NORMAS URBANISTICAS -->
+
   <div class="form-group">
-      <label for="propietarios" class="form-label">Tipo de Propietario</label>
-      <select id="propietarios" name="propietarios" class="form-select">
-          <option value="Propietario">Propietario</option>
-          <option value="Poseedor">Poseedor</option>
-          <option value="Personeria">Personeria</option>
+      <label for="usospermitidos" class="form-label">Usos permitidos</label>
+      <select id="usospermitidos" name="usospermitidos" class="form-select">
+        <option value="AGR">AGRICOLA</option>
+        <option value="APE">AGROPECUARIO</option>
+        <option value="AVI">AVICOLA</option>
+        <option value="AFO">AGROFORESTAL</option>
+        <option value="AVR">AREAS VERDES Y RECREACION.</option>
+        <option value="ARV">AREAS VERDES</option>
+        <option value="ASI">AREAS SUJETAS A INUNDACIÓN</option>
+        <option value="BAL">BALDIO</option>
+        <option value="COM">COMERCIAL</option>
+        <option value="CAM">CAMARONERAS</option>
+        <option value="DEP">DEPORTES</option>
+        <option value="EBI">EQUIPAMIENTO DE BIENESTAR SOCIAL</option>
+        <option value="CUR">EQUIPAMIENTO CULTURA O RELIGION</option>
+        <option value="EDU">EQUIPAMIENTO DE EDUCACION</option>
+        <option value="ESA">EQUIPAMIENTO DE SALUD</option>
+        <option value="ESG">EDIFICIOS SINGULARES</option>
+        <option value="ETR">EQUIPAMIENTO DE TRANSPORTE</option>
+        <option value="ESP">ESPECTACULOS Y RECREACION.</option>
+        <option value="FOR">FORESTAL</option>
+        <option value="GAN">GANADERO</option>
+        <option value="IND">INDUSTRIAL</option>
+        <option value="MIN">MINERO.</option>
+        <option value="REN">RESERVA NATURAL</option>
+        <option value="REU">RESERVA PARA USOS URBANOS</option>
+        <option value="RES">RESIDENCIAL</option>
+        <option value="SPN">SERVICIOS PUBLICOS NACIONALES</option>
+        <option value="SPM">SERVICIOS PUBLICOS MUNICIPALES</option>
+        <option value="SIL">SILVOPASTORIL</option>
+        <option value="SVE">SUELO SIN VEGETACION O ARIDOS</option>
+        <option value="TAC">TACOTALES O MATORRALES</option>
+        <option value="TOD">USOS MULTIPLES</option>
+        <option value="TUR">TURISMO</option>
+        <option value="SAL">SALINAS</option>
+        <option value="SAC">SALINAS Y CAMARONERAS</option>
+        <option value="ACU">ICULTURA.</option>
+        <option value="GAR">GARAJES O PARQUEOS</option>
+        <option value="OFI">OFICINA DE TODO TIPO</option>
+        <option value="SER">SERVICIOS EN GENERAL</option>
       </select>
   </div>
+
   <div class="form-group">
-      <label for="nombre_completo" class="form-label">Nombre Completo</label>
-      <input type="text" id="nombre_completo" name="nombre_completo" class="form-input" placeholder="Nombre Completo" value="N/A" />
+      <label for="edificacion_permitida" class="form-label">Edificacion permitida (total )(F.O.T - %)</label>
+      <input type="text" id="edificacion_permitida" name="edificacion_permitida" class="form-input" placeholder="Edificacion permitida (total )(F.O.T - %)" value="N/A" />
   </div>
+
+  <div class="form-group">
+      <label for="ocupacion_maxima" class="form-label">Ocupacion maxima permitida (proyec horiz)(F.O.T - %)</label>
+      <input type="text" id="ocupacion_maxima" name="ocupacion_maxima" class="form-input" placeholder="Ocupacion maxima permitida (proyec horiz)(F.O.T - %)" value="N/A" />
+  </div>
+
+  <div class="form-group">
+      <label for="superficie_min" class="form-label">Superficie min de lote (m2)</label>
+      <input type="text" id="superficie_min" name="superficie_min" class="form-input" placeholder="Superficie min de lote (m2)" value="N/A" />
+  </div>
+
+  <div class="form-group">
+      <label for="numerodeplantas" class="form-label">Numero de plantas permitidas</label>
+      <input type="text" id="numerodeplantas" name="numerodeplantas" class="form-input" placeholder="Numero de plantas permitidas" value="N/A" />
+  </div>
+
+<!-- VIAS O LUGARES -->
+
+  <div class="form-group">
+      <label for="numerodevias" class="form-label">Numero de vias o lugares</label>
+      <input type="text" id="numerodevias" name="numerodevias" class="form-input" placeholder="Numero de vias o lugares" value="N/A" />
+  </div>
+
+<!-- UBICACION TERRITORIAL -->
+
+  <div class="form-group">
+      <label for="barrio" class="form-label">Barrio/Sector de ubicacion</label>
+      <input type="text" id="barrio" name="barrio" class="form-input" placeholder="Barrio/Sector de ubicacion" value="N/A" />
+  </div>
+
+  <div class="form-group">
+      <label for="TipodeAsentamiento" class="form-label">Tipo de Asentamiento humano</label>
+      <select id="TipodeAsentamiento" name="TipodeAsentamiento" class="form-select">  
+        <option value="01">REPARTO RESIDENCIAL</option>
+        <option value="02">BARRIO TRADICIONAL</option>
+        <option value="03">URBANIZACION PROGRESIVA</option>
+        <option value="04">VILLA O COLONIA</option>
+        <option value="05">ASENTAMIENTO ESPONTANEO</option>
+        <option value="06">VIVIENDA RURAL DISPERSA</option>
+        <option value="07">VIVIENDA RURAL CONCENTRADA</option>
+        <option value="08">REPARTO DE VIVIENDAS MINIMAS</option>
+        <option value="09">ZONA INDUSTRIAL</option>
+        <option value="10">ZONA COSTERA</option>
+        <option value="11">ZONA COMERCIAL</option>
+      </select>
+  </div>
+
+<!-- IDENTIFICACION Y CARACTERISTICAS -->
+
+  <div class="form-group">
+      <label for="barrio" class="form-label">Nombre de la via o lugar</label>
+      <input type="text" id="barrio" name="barrio" class="form-input" placeholder="Nombre de la via o lugar" value="N/A" />
+  </div>
+
+  <div class="form-group">
+      <label for="clasedevia" class="form-label">Clase de via o lugar</label>
+      <select id="clasedevia" name="clasedevia" class="form-select">  
+        <option value="ESP">ESPACIO ABIERTO</option>
+        <option value="AGU">FUENTE O CURSO DE AGUA</option>
+        <option value="VIA">VIA</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label for="accesibilidad" class="form-label">Accesibilidad de vias</label>
+      <select id="accesibilidad" name="accesibilidad" class="form-select">   
+        <option value="BIC">BICICLETAS O MOTOCICLETAS</option>
+        <option value="BES">BESTIA</option>
+        <option value="DIF">PEATONES CON DIFICULTAD</option>
+        <option value="EMB">SOLO EMBARCACIONES</option>
+        <option value="FER">SOLO FERROCARRIL</option>
+        <option value="PEA">SOLO PEATONES</option>
+        <option value="VIT">VEHICULOS DE TODO TIPO</option>
+        <option value="VDT">VEHICULOS DOBLE TRACCION</option>
+        <option value="VHL">VEHICULOS LIVIANOS</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label for="revestimiento" class="form-label">Revestimiento</label>
+      <select id="revestimiento" name="revestimiento" class="form-select">  
+        <option value="ADO">ADOQUIN</option> 
+        <option value="ASF">ASFALTO</option> 
+        <option value="CON">CONCRETO</option> 
+        <option value="EMP">EMPEDRADO</option> 
+        <option value="LOC">LOSETAS DE CONCRETO</option> 
+        <option value="MAC">MACADAM</option> 
+        <option value="MSC">MATERIAL SELECTO COMPACTO</option> 
+        <option value="MSS">MATERIAL SELECTO SUELTO</option> 
+        <option value="PCA">PIEDRA CANTERA</option> 
+        <option value="SUE">SUPERFICIE EN ESTADO NATURAL</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label for="caracteristicas" class="form-label">Caracteristicas historicas</label>
+      <input type="text" id="caracteristicas" name="caracteristicas" class="form-input" placeholder="Caracteristicas historicas" value="N/A" />
+  </div>
+
+  <div class="form-group">
+      <label for="tiposdevias" class="form-label">Tipos de vias</label>
+      <select id="tiposdevias" name="tiposdevias" class="form-select">  
+        <option value="ANF">ANFITEATRO</option>
+        <option value="AUT">AUTOPISTA</option>
+        <option value="BAL">BALNEARIO</option>
+        <option value="BPU">BASURERO PUBLICO</option>
+        <option value="BOS">BOSQUE O PARQUE NATURAL</option>
+        <option value="BOU">BOULEVARD</option>
+        <option value="PEA">ANDEN PEATONAL</option>
+        <option value="CVR">CALLE VEHICULAR CIRCULACION RESTRINGIDA</option>
+        <option value="CVH">CALLE VEHICULAR</option>
+        <option value="CJN">CALLEJON</option>
+        <option value="CPV">CAMINO PENETRACIÓN VECINAL</option>
+        <option value="CTR">CAMINO TRONCAL</option>
+        <option value="CFE">CAMPO DE FERIAS</option>
+        <option value="CDA">CAMPO DEPORTIVO AL AIRE LIBRE</option>
+        <option value="CCO">CARRETERA EN CONSTRUCCION</option>
+        <option value="CPR">CARRETERA PRINCIPAL</option>
+        <option value="CSE">CARRETERA SECUNDARIA</option>
+        <option value="CNR">CARRETERA SECUNDARIA</option>
+        <option value="CRV">CAUCE REVESTIDO</option>
+        <option value="CEM">CEMENTERIO</option>
+        <option value="EPV">ESTACIONAMIENTO VEHICULOS</option>
+        <option value="FER">FERROCARRIL</option>
+        <option value="GRA">GRADAS PEATONALES</option>
+        <option value="HOS">HUELLA O SENDA</option>
+        <option value="JIN">JUEGOS INFANTILES</option>
+        <option value="LAG">LAGO O LAGUNA</option>
+        <option value="MLC">MALECON</option>
+        <option value="MAN">MANANTIAL O VERTIENTE</option>
+        <option value="MAL">MERCADO AL AIRE LIBRE</option>
+        <option value="MIR">MIRADOR</option>
+        <option value="PAR">PARQUE</option>
+        <option value="PLA">PLAZA O PLAZOLETA</option>
+        <option value="RIO">RIO O CURSO DE AGUA</option>
+        <option value="MAS">MANGLARES O SWAMP</option>
+        <option value="MAR">MAR</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label for="conservacion" class="form-label">ESTADO DE CONSERVACION</label>
+      <select id="conservacion" name="conservacion" class="form-select">
+          <option value="EXC">EXELENTE</option>
+          <option value="MBU">MUY BUENO</option>
+          <option value="BUE">BUENO O NORMAL</option>
+          <option value="MAL">MALO</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label for="acado" class="form-label">ACABADO DE ACERAS</label>
+      <select id="acado" name="acado" class="form-select">
+          <option value="NOH">NO HAY</option>
+          <option value="ADO">ADOQUIN</option>
+          <option value="EMP">EMPEDRADO</option>
+          <option value="CER">CERAMICA</option>
+          <option value="COS">CONCRETO SIMPLE</option>
+          <option value="LAB">LADRILLO DE BARRO</option>
+          <option value="LAC">LADRILLO DE CEMENTO</option>  
+          <option value="LCP">LOSETA DE CEMENTO PREFABRICADO</option>
+          <option value="MAD">MADERA</option>
+          <option value="RIP">RIPIO</option>
+      </select>
+  </div>
+
+<!-- SERVICIOS PUBLICOS -->
   <div class="form-group">
       <label for="cedula" class="form-label">Cedula o Pasaporte</label>
       <input type="tel" id="cedula" name="cedula" class="form-input" placeholder="Cedula o Pasaporte" value="N/A" />

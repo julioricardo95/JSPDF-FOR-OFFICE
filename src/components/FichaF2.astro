@@ -3,15 +3,24 @@
 ---
 
 <h1 class="main-title">Fichas de Ficha 2</h1>
+
 <form id="bigForm" class="bigForm">
+
+  <div class="form-group">
+        <label for="alcaldia" class="form-label">Alcaldia de</label>
+        <input type="text" id="alcaldia" name="alcaldia" class="form-input" placeholder="Alcaldia de:" value="N/A" />
+  </div>
+
   <div class="form-group">
       <label for="codigo_catastral" class="form-label">Codigo catastral</label>
       <input type="number" id="codigo_catastral" name="codigo_catastral" class="form-input" placeholder="Codigo catastral" required />
   </div>
+
   <div class="form-group">
       <label for="SISCAT" class="form-label">SISCAT</label>
       <input type="number" id="SISCAT" name="SISCAT" class="form-input" placeholder="SISCAT" />
   </div>
+
   <div class="form-group">
       <label for="propietarios" class="form-label">Tipo de Propietario</label>
       <select id="propietarios" name="propietarios" class="form-select">
@@ -20,22 +29,27 @@
           <option value="Personeria">Personeria</option>
       </select>
   </div>
+
   <div class="form-group">
       <label for="nombre_completo" class="form-label">Nombre Completo</label>
       <input type="text" id="nombre_completo" name="nombre_completo" class="form-input" placeholder="Nombre Completo" value="N/A" />
   </div>
+
   <div class="form-group">
       <label for="cedula" class="form-label">Cedula o Pasaporte</label>
       <input type="tel" id="cedula" name="cedula" class="form-input" placeholder="Cedula o Pasaporte" value="N/A" />
   </div>
+
   <div class="form-group">
       <label for="razonsocial" class="form-label">Razon Social</label>
       <input type="text" id="razonsocial" name="razonsocial" class="form-input" placeholder="Razon Social" value="N/A" />
   </div>
+
   <div class="form-group">
       <label for="ruc" class="form-label">RUC</label>
       <input type="number" id="ruc" name="ruc" class="form-input" placeholder="RUC" value="N/A" />
   </div>
+
   <div class="form-group">
       <label for="coops" class="form-label">Tipo de Cooperativa</label>
       <select id="coops" name="coops" class="form-select">
@@ -45,44 +59,155 @@
           <option value="anonima">S. Anonima</option>
       </select>
   </div>
+
   <div class="form-group">
       <label for="direccion" class="form-label">Direccion</label>
       <input type="text" id="direccion" name="direccion" class="form-input" placeholder="Direccion" />
   </div>
+
   <div class="form-group">
-      <label for="beneficios" class="form-label">Beneficios</label>
-      <input type="text" id="beneficios" name="beneficios" class="form-input" placeholder="Beneficios" value="N/A" />
+      <label for="beneficios" class="form-label">Beneficios Tributarios del Propietario</label>
+      <select id="beneficios" name="beneficios" class="form-select">
+          <option value="N/A">N/A</option>
+          <option value="ENT">Entes autonomos</option>
+          <option value="EST">Estado y sus Instituciones</option>
+          <option value="IGL">Iglesias y confesiones religiosas por templo</option>
+          <option value="MUN">Municipalidad</option>
+          <option value="REP">Representaciones diplomaticas</option>
+          <option value="ORG">Sede de organismos internacionales</option>
+          <option value="ASO">Asociacion de municipios</option>
+          <option value="GRE">Asociaciones gremiales</option>
+          <option value="COM">Comunidades indigenas</option>
+      </select>
   </div>
+
   <div class="form-group">
       <label for="nececidades" class="form-label">Nececidades de la Poblacion</label>
       <select id="nececidades" name="nececidades" class="form-select">
-          <option value="otro">Otro</option>
-          <option value="lim">S.R. Lim</option>
-          <option value="coop">S. Coop</option>
-          <option value="anonima">S. Anonima</option>
+
+        <!-- Alumbrado Público -->
+        <option value="a01">AMPLIAR LA CANTIDAD DE LUMINARIAS</option>
+        <option value="a02">MEJORAR SERVICIO DE ALUMBRADO PUBLICO</option>
+
+        <!-- Desarrollo Económico -->
+        <option value="d01">CREACION DE FUENTES DE EMPLEO</option>
+        <option value="d02">FINANCIAMIENTO PARA LA PRODUCCION</option>
+        <option value="d03">INSUMOS AGRICOLAS</option>
+        <option value="d04">INCREMENTO EN LOS SALARIOS</option>
+        <option value="d05">LEGALIZACION DE LOS TERRENOS</option>
+        <option value="d06">CONTROLAR LA SEGURIDAD EN EXPENDIOS DE GAS, COMBUTIBLE Y PRODUCTOS QUIMICOS</option>
+
+        <!-- Educación -->
+        <option value="e01">ESCUELAS</option>
+        <option value="e02">REPARACION DE LA ESCUELA</option>
+        <option value="e03">AUMENTAR MAESTROS</option>
+        <option value="e04">REDUCIR EL ANALFABETISMO</option>
+        <option value="e05">CAPACITACION TECNICA A MAESTROS</option>
+        <option value="e06">AMPLIACION DE ESCUELAS</option>
+        <option value="e07">CENTRO DE DESARROLLO INFANTIL (CDI)</option>
+        <option value="e08">EDUCACION PARA EL ADULTO</option>
+
+        <!-- Servicios Telefónicos -->
+        <option value="f01">AMPLIAR COBERTURA DE SERVICIO TELEFONICO</option>
+        <option value="f02">INSTALACION DE TELEFONO PUBLICOS</option>
+
+        
+        <!-- Seguridad Ciudadana -->
+        <option value="g01">MEJORAR LA SEGURIDAD CIUDADANA</option>
+        <option value="g02">INCREMENTAR LA CANTIDAD DE POLICIAS</option>
+        <option value="g03">MEJORAR EL SERVICIO QUE BRINDA LA POLICIA</option>
+        <option value="g04">DELEGACION O PUESTO DE POLICIA</option>
+        <option value="g05">CONTROLAR LOS EXPENDIO DE DROGAS</option>
+        
+        <!-- Infraestructura -->
+        <option value="i01">REPARACION DE CALLES EN MAL ESTADO</option>
+        <option value="i02">CAMINOS DE ACCESO</option>
+        <option value="i03">REPARACION DE CARRETERAS Y CAMINOS MALOS</option>
+        <option value="i04">PARQUE INFANTIL</option>
+        <option value="i05">SEÑALIZACION VIAL</option>
+        <option value="i06">CUNETAS Y VADOS</option>
+        <option value="i07">MANTENIMIENTO Y LIMPIEZA DE CANALES PLUVIALES O CAUCES</option>
+        <option value="i08">CONSTRUCCION DE ALCANTARRILLADO PLUVIAL</option>
+        <option value="i09">REPARACION DE PUENTE</option>
+        <option value="i10">REVESTIMIENTO DE LAS CALLES</option>
+        <option value="i11">CONSTRUCCION DE ANDENES PEATONALES</option>
+        <option value="i12">PROYECTO LETRINIZACION</option>
+        <option value="i13">ALCANTARILLADO SANITARIO</option>
+        
+        <!-- Electricidad -->
+        <option value="l01">AMPLIAR COBERTURA DEL SERVICIO ELECTRICO</option>
+        <option value="l02">MEJORAR CALIDAD DEL SERVICIO DE ENERGIA ELECTRICA</option>
+        
+        <!-- Agua Potable -->
+        <option value="p01">INSTALACION DEL SERVICIO DE AGUA POTABLE</option>
+        <option value="p02">AMPLIAR COBERTURA DEL SERVICIO DE AGUA POTABLE</option>
+        <option value="p03">MEJORAR SERVICIO DE AGUA POTABLE</option>
+        <option value="p04">MEJORAR LA CALIDAD DEL AGUA POTABLE</option>
+        <option value="p05">POZO O PUESTO PUBLICO</option>
+        
+        <!-- Otros Proyectos Comunitarios -->
+        <option value="q01">MERCADO</option>
+        <option value="q02">BIBLIOTECA MUNICIPAL</option>
+        <option value="q03">TERMINAL DE BUSES</option>
+        <option value="q04">BASURERO O VERTEDERO MUNICIPAL</option>
+        <option value="q05">RASTRO MUNICIPAL</option>
+        <option value="q06">CONSTRUCCION DE CANCHA DEPORTIVA MULTIPLE (BALONCESTO, VOLEIBOL, FUTBOL SALA)</option>
+        <option value="q07">CONSTRUCCION DE UN ESTADIO (BEISBOL O FUTBOL)</option>
+        <option value="q08">CONSTRUCCION DE UNA IGLESIA O CAPILLA</option>
+        <option value="q09">CONSTRUCCION DE UN COMEDOR INFANTIL</option>
+        <option value="q10">SERVICIO DE RECOLECCION DE RESIDUOS SOLIDOS O BASURA</option>
+        <option value="q11">ESTABLECER RUTAS DE TRANSPORTE COLECTIVO</option>
+        
+        <!-- Unidades de Salud -->
+        <option value="s01">UNIDADES DE SALUD</option>
+        <option value="s02">REPARACION DE UNIDADES DE SALUD</option>
+        <option value="s03">PERSONAL MEDICO</option>
+        <option value="s04">MEDICINAS</option>
+        <option value="s05">VACUNAS</option>
+        <option value="s06">REDUCIR ENFERMEDADES DIARREICAS</option>
+        <option value="s07">MEJORAR LA SALUBRIDAD AMBIENTAL</option>
+        <option value="s08">DISMINUIR LA DESNUTRICION INFANTIL</option>
+        <option value="s09">MATERIAL Y EQUIPOS EN UNIDADES DE SALUD</option>
+        <option value="s10">MEJORAR LA ATENCION EN LAS UNIDADES DE SALUD</option>
+        
+        <!-- Viviendas -->
+        <option value="vol">REPARAR DE LA CUBIERTA O TECHO</option>
+        <option value="v02">REPARACION DE PAREDES</option>
+        <option value="v03">REPARACION DEL PISO</option>
+        <option value="v04">AMPLIACION DE VIVIENDA</option>
+        <option value="v05">REDUCIR EL HACINAMIENTO</option>
+        <option value="v06">VIVIENDA</option>
+        <option value="v07">MEJORAMIENTO INTEGRAL DE VIVIENDAS</option>
+        
       </select>
   </div>
+
   <div class="form-group">
       <label for="encuestado" class="form-label">Nombre del Encuestado</label>
       <input type="text" id="encuestado" name="encuestado" class="form-input" placeholder="Nombre del Encuestado" />
   </div>
+
   <div class="form-group">
       <label for="encuestador" class="form-label">Encuestador</label>
       <select id="encuestador" name="encuestador" class="form-select">
-          <option value="julio">Julio</option>
-          <option value="xochil">Xochil</option>
-          <option value="omid">Omid</option>
+          <option value="julio">Julio Ricardo Gutierrez Jarquin</option>
+          <option value="xochilt">Xochilt Yolanda Campos Gomes</option>
+          <option value="omid">Omid Naim Picado Jarquin</option>
       </select>
   </div>
+
   <div class="form-group">
       <label for="birthdate" class="form-label">Fecha</label>
       <input type="date" id="birthdate" name="birthdate" class="form-input" />
   </div>
+
   <div class="form-group">
       <label for="comments" class="form-label">Comentarios Adicionales</label>
       <textarea id="comments" name="comments" class="form-textarea" rows="5"></textarea>
   </div>
+
   <button type="submit" class="form-button">Enviar y Descargar PDF Estilizado
       <strong>julioricardo95😎</strong>
   </button>
+
 </form>
