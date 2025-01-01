@@ -3,7 +3,7 @@
 
 	document.getElementById('bigForm').addEventListener('submit', function(e) {
 		e.preventDefault();
-		const formData = new FormData(this);
+		const formData = new FormData(this as HTMLFormElement);
 		const pdf = new jsPDF();
 
 		// Definir los colores
