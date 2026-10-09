@@ -1,9 +1,7 @@
-<h1 class="main-title">Fichas de Ficha 3</h1>
-<form id="bigForm" class="bigForm">
+---
+import FichaForm from "./FichaForm.astro";
+---
 
-    <slot/>
-
-    <button type="submit" class="form-button">Enviar y Descargar PDF Estilizado
-        <strong>julioricardo95😎</strong>
-    </button>
-</form>
+<FichaForm ficha={3}>
+  <slot />
+</FichaForm>

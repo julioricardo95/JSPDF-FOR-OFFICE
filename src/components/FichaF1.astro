@@ -1,10 +1,8 @@
 ---
-
+import FichaForm from "./FichaForm.astro";
 ---
 
-<h1 class="main-title">Fichas de Ficha 1</h1>
-
-<form id="bigForm" class="bigForm">
+<FichaForm ficha={1}>
   <div class="form-group">
     <label for="alcaldia" class="form-label">Alcaldia de:</label>
     <input
@@ -577,8 +575,5 @@
     <textarea id="comments" name="comments" class="form-textarea" rows="5"
     ></textarea>
   </div>
-  <button type="submit" class="form-button"
-    >Enviar y Descargar PDF Estilizado
-    <strong>julioricardo95😎</strong>
-  </button>
-</form>
+  <slot />
+</FichaForm>

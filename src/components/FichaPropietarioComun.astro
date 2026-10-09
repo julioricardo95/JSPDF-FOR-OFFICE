@@ -1,0 +1,39 @@
+---
+import DatosPropietario from "./DatosPropietario.astro";
+import DatosEncuesta from "./DatosEncuesta.astro";
+---
+
+<div class="form-group">
+  <label for="propietarios" class="form-label">Tipo de Propietario</label>
+  <select id="propietarios" name="propietarios" class="form-select">
+    <option value="Propietario">Propietario</option>
+    <option value="Poseedor">Poseedor</option>
+    <option value="Personeria">Personeria</option>
+  </select>
+</div>
+
+<DatosPropietario />
+
+<div class="form-group">
+  <label for="beneficios" class="form-label">Beneficios</label>
+  <input
+    type="text"
+    id="beneficios"
+    name="beneficios"
+    class="form-input"
+    placeholder="Beneficios"
+    value="N/A"
+  />
+</div>
+
+<div class="form-group">
+  <label for="nececidades" class="form-label">Nececidades de la Poblacion</label>
+  <select id="nececidades" name="nececidades" class="form-select">
+    <option value="otro">Otro</option>
+    <option value="lim">S.R. Lim</option>
+    <option value="coop">S. Coop</option>
+    <option value="anonima">S. Anonima</option>
+  </select>
+</div>
+
+<DatosEncuesta />
