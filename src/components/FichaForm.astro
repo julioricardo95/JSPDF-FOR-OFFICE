@@ -1,0 +1,16 @@
+---
+interface Props {
+  ficha: number;
+}
+
+const { ficha } = Astro.props;
+---
+
+<h1 class="main-title">Ficha {ficha}</h1>
+<form id="bigForm" class="bigForm">
+  <slot />
+  <button type="submit" class="form-button">
+    Enviar y Descargar PDF Estilizado
+    <strong>julioricardo95😎</strong>
+  </button>
+</form>

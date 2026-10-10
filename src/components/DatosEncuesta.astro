@@ -1,0 +1,39 @@
+---
+interface Props {
+  encuestadores?: { value: string; label: string }[];
+}
+
+const { encuestadores = [
+  { value: "julio", label: "Julio" },
+  { value: "xochil", label: "Xochil" },
+  { value: "omid", label: "Omid" },
+] } = Astro.props;
+---
+
+<div class="form-group">
+  <label for="encuestado" class="form-label">Nombre del Encuestado</label>
+  <input
+    type="text"
+    id="encuestado"
+    name="encuestado"
+    class="form-input"
+    placeholder="Nombre del Encuestado"
+  />
+</div>
+
+<div class="form-group">
+  <label for="encuestador" class="form-label">Encuestador</label>
+  <select id="encuestador" name="encuestador" class="form-select">
+    {encuestadores.map(({ value, label }) => <option value={value}>{label}</option>)}
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="birthdate" class="form-label">Fecha</label>
+  <input type="date" id="birthdate" name="birthdate" class="form-input" />
+</div>
+
+<div class="form-group">
+  <label for="comments" class="form-label">Comentarios Adicionales</label>
+  <textarea id="comments" name="comments" class="form-textarea" rows="5"></textarea>
+</div>

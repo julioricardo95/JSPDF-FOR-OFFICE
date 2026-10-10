@@ -1,0 +1,9 @@
+---
+import FichaForm from "./FichaForm.astro";
+import FichaPropietarioComun from "./FichaPropietarioComun.astro";
+---
+
+<FichaForm ficha={4}>
+  <FichaPropietarioComun />
+  <slot />
+</FichaForm>

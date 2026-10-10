@@ -1,48 +1,23 @@
-# Astro Starter Kit: Basics
+# Fichas municipales
 
-```sh
-npm create astro@latest -- --template basics
-```
+Aplicación Astro para completar fichas municipales y descargarlas como PDF.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Estructura
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- `src/pages/ficha/`: rutas para cada ficha.
+- `src/components/FichaF*.astro`: contenido específico de cada ficha.
+- `src/components/FichaForm.astro`: estructura común del formulario, título y botón de descarga.
+- `src/components/DatosPropietario.astro` y `DatosEncuesta.astro`: grupos de campos reutilizados.
+- `src/components/FichaPropietarioComun.astro`: campos compartidos por las fichas 4 y 5.
+- `src/components/JsPdf.astro`: generación del PDF.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Para añadir una ficha, crea su componente específico dentro de `src/components/`, envuelve los campos con `FichaForm` y agrega una página en `src/pages/ficha/`. Reutiliza los grupos de campos existentes cuando correspondan; conserva en el componente específico las opciones que sean propias de esa ficha.
 
-## 🚀 Project Structure
+## Comandos
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Comando | Acción |
+| --- | --- |
+| `npm install` | Instala las dependencias |
+| `npm run dev` | Inicia el servidor local de Astro |
+| `npm run build` | Genera el sitio estático en `dist/` |
+| `npm run preview` | Previsualiza el sitio generado |
